@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Tech Pet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo h1"><img class="imagem"  src="img/logoPet.png" alt="Logo"></div>
+            <div class="input-group w-50">
+                <input type="text" class="form-control" placeholder="O que seu pet precisa?">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <img src="img/lupa.png" alt="Pesquisar" width="20" height="20">
+                    </button>
+                </div>
+            </div>
+            <div class="user-options d-flex align-items-center">
+                <button class="btn btn-outline-primary mx-1">
+                    <a href="login.html"><img src="img/perfil-de-usuario.png" alt="Login" width="20" height="20"></a>
+                </button>
+                <button class="btn btn-outline-primary mx-1" id="cartButton">
+                    <img src="img/carrinho-de-compras.png" alt="Carrinho" width="20" height="20"> 
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <nav class="bg-dark text-white py-2">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white" href="#">Animais</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Farmácia</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Rações</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Banho e Tosa</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Acessórios</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Promoções</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Marcas</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Remédios</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#">Ajuda</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container my-4">
+        <section class="categories row text-center mb-4">
+            <div class="col-md-2 col-6 mb-3">
+                <div class="category p-3 bg-light">Gato</div>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <div class="category p-3 bg-light">Cachorros</div>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <div class="category p-3 bg-light">Pássaros</div>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <div class="category p-3 bg-light">Roedores</div>
+            </div>
+            <div class="col-md-2 col-6 mb-3">
+                <div class="category p-3 bg-light">Peixe</div>
+            </div>
+        </section>
+        <section class="recommended">
+            <h2 class="mb-4">Recomendados</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="img/pote.png" class="card-img-top" alt="Produto 1">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Produto 1</h5>
+                            <p class="card-text">R$40,00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Produto 1" data-price="40">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="img/bolinhas.png" class="card-img-top" alt="Produto 2">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Produto 2</h5>
+                            <p class="card-text">R$30,00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Produto 2" data-price="30">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="img/pote-dobravel.png" class="card-img-top" alt="Produto 3">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Produto 3</h5>
+                            <p class="card-text">R$40,00</p>
+                            <button class="btn btn-primary add-to-cart" data-name="Produto 3" data-price="40">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="#" class="text-white mx-2">Facebook</a>
+                <a href="#" class="text-white mx-2">Instagram</a>
+                <a href="#" class="text-white mx-2">Twitter</a>
+            </div>
+            <div class="mb-3">
+                <p>Meios de pagamento:</p>
+                <span class="mx-2">Visa</span>
+                <span class="mx-2">MasterCard</span>
+            </div>
+            <p>&copy; 2024 Care Tech Pet - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Modal do Carrinho -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Total</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems"></tbody>
+                    </table>
+                    <div class="text-right">
+                        <h4>Total: R$<span id="cartTotal">0.00</span></h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

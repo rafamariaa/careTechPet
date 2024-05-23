@@ -1,0 +1,36 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+header .logo img {
+    height: 50px;
+    /* Alinhar verticalmente o logo */
+    vertical-align: middle;
+}
+.input-group .input-group-append .btn {
+    border: none;
+    background-color: transparent;
+}
+.input-group .input-group-append .btn img {
+    width: 20px;
+    height: 20px;
+}
+.user-options .btn img {
+    width: 20px;
+    height: 20px;
+}
+/* Ajuste de margens para os elementos do header */
+header .logo {
+    margin-right: 20px;
+}
+header .input-group {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+.bg-dark {
+    background-color: #1491CB !important;
+}
+.card{
+  padding: 8%;
+ 
+}
